@@ -3,9 +3,6 @@
 
 # Italiano
 
-Questo repository contiene il porting per React Native (eseguito dal team di <a href="https://github.com/pagopa/io-app">IO</a>) dell'SDK sviluppato da IPZS (<a href="https://docs.italia.it/italia/cie/cie-manuale-tecnico-docs/it/master/cieIDSDK.html">disponibile qui</a>)
-<br />
-
 ## Installazione
 
 Per utilizzare la libreria nel tuo progetto:
@@ -75,7 +72,7 @@ Una volta importato, è possibile accedere a tutti i suoi metodi.
 ## API
 
 Di seguito sono elencate alcune delle funzionalità presenti. <br />
-E' possibile trovare <a href="https://github.com/pagopa/io-cie-sdk/blob/master/index.d.ts">qui</a> tutte le altre.
+E' possibile trovare <a href="https://github.com/i1990jain/io-cie-sdk/blob/master/index.d.ts">qui</a> tutte le altre.
 
 | Function                                                                    | Return             | Descrizione                                                  |
 | :-------------------------------------------------------------------------- | :----------------- | :----------------------------------------------------------- |
@@ -115,9 +112,6 @@ Durante la lettura dell'NFC, i possibili errori sono i seguenti
 | `Transmission Error`          | (iOS) Errore durante la trasmissione NFC                               |
 
 # English
-
-This repository contains the React Native library for <a href="https://docs.italia.it/italia/cie/cie-manuale-tecnico-docs/it/master/cieIDSDK.html">CIE integration</a>, written by <a href="https://github.com/pagopa/io-app">IO</a>
-<br />
 
 ## Installation
 
@@ -188,7 +182,7 @@ Now you have access to all the methods.
 
 ## API
 
-A summary of some functionalities are written below, but you can find more <a href="https://github.com/pagopa/io-cie-sdk/blob/master/index.d.ts">here</a>.
+A summary of some functionalities are written below, but you can find more <a href="https://github.com/i1990jain/io-cie-sdk/blob/master/index.d.ts">here</a>.
 
 | Function                                                                    | Return             | Desciption                                        |
 | :-------------------------------------------------------------------------- | :----------------- | :------------------------------------------------ |
