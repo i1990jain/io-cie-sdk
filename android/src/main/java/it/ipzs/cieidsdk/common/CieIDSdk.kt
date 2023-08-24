@@ -13,6 +13,7 @@ import android.nfc.TagLostException
 import android.nfc.tech.IsoDep
 import android.os.Build
 import android.provider.Settings
+import android.util.Log
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.observers.DisposableSingleObserver
 import io.reactivex.plugins.RxJavaPlugins
@@ -32,6 +33,9 @@ import retrofit2.Response
 import java.net.SocketTimeoutException
 import java.net.UnknownHostException
 import javax.net.ssl.SSLProtocolException
+import java.security.cert.CertificateFactory
+import java.security.cert.X509Certificate
+import java.io.ByteArrayInputStream
 
 val CERTIFICATE_EXPIRED: CharSequence = "SSLV3_ALERT_CERTIFICATE_EXPIRED"
 val CERTIFICATE_REVOKED: CharSequence = "SSLV3_ALERT_CERTIFICATE_REVOKED"
@@ -51,7 +55,7 @@ object CieIDSdk : NfcAdapter.ReaderCallback {
     internal var deepLinkInfo: DeepLinkInfo = DeepLinkInfo()
     internal var ias: Ias? = null
     private var idpCustomUrl: String? = null
-    internal var enableLog: Boolean = false
+    internal var enableLog: Boolean = true
     private var ciePin = ""
     // the timeout of transceive(byte[]) in milliseconds (https://developer.android.com/reference/android/nfc/tech/IsoDep#setTimeout(int))
     // a longer timeout may be useful when performing transactions that require a long processing time on the tag such as key generation.
@@ -70,7 +74,20 @@ object CieIDSdk : NfcAdapter.ReaderCallback {
 
     @SuppressLint("CheckResult")
     fun call(certificate: ByteArray) {
+        val byteArray: ByteArray = certificate
+        try {
+            val certFactory = CertificateFactory.getInstance("X.509")
+            val certStream = ByteArrayInputStream(byteArray)
 
+            val generatedCert = certFactory.generateCertificate(certStream) as X509Certificate
+
+            Log.d("certificate","Subject: ${generatedCert.subjectDN}")
+            Log.d("certificate","Issuer: ${generatedCert.issuerDN}")
+            Log.d("certificate","Validity: ${generatedCert.notBefore} to ${generatedCert.notAfter}")
+            
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
         val idpService: IdpService = NetworkClient(certificate, idpCustomUrl).idpService
         val mapValues = hashMapOf<String, String>().apply {
             put(deepLinkInfo.name!!, deepLinkInfo.value!!)
