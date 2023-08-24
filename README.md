@@ -1,8 +1,3 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/pagopa/io-app/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" width="100"/></br>
-  IO - The public services app
-</p>
-
 - [Italiano](#italiano)
 - [English](#english)
 
@@ -16,7 +11,7 @@ Questo repository contiene il porting per React Native (eseguito dal team di <a 
 Per utilizzare la libreria nel tuo progetto:
 
 ```bash
-npm install @pagopa/react-native-cie --save
+npm install @i1990jain/react-native-cie --save
 ```
 
 La login con CIE può essere effettuata esclusivamente tramite tecnologia NFC (tecnologia di tipo Hardware).
@@ -28,8 +23,8 @@ Per superare il problema, è necessario rinominare la cartella `ios` in `.ios`. 
 Per facilitare questo passaggio e abilitare la compilazione della libreria (lanciando la build da un device reale), è stato definito il comando:
 
 ```bash
-mv node_modules/@pagopa/react-native-cie/.ios node_modules/@pagopa/react-native-cie/ios
-mv node_modules/@pagopa/react-native-cie/.react-native-cie.podspec node_modules/@pagopa/react-native-cie/react-native-cie.podspec
+mv node_modules/@i1990jain/react-native-cie/.ios node_modules/@i1990jain/react-native-cie/ios
+mv node_modules/@i1990jain/react-native-cie/.react-native-cie.podspec node_modules/@i1990jain/react-native-cie/react-native-cie.podspec
 cd ios
 pod install
 ```
@@ -37,8 +32,8 @@ pod install
 Per effettuare l'operazione inversa, invece:
 
 ```bash
-mv node_modules/@pagopa/react-native-cie/ios node_modules/@pagopa/react-native-cie/.ios
-mv node_modules/@pagopa/react-native-cie/react-native-cie.podspec node_modules/@pagopa/react-native-cie/.react-native-cie.podspec
+mv node_modules/@i1990jain/react-native-cie/ios node_modules/@i1990jain/react-native-cie/.ios
+mv node_modules/@i1990jain/react-native-cie/react-native-cie.podspec node_modules/@i1990jain/react-native-cie/.react-native-cie.podspec
 cd ios
 rm -rf Pods
 pod install
@@ -72,7 +67,7 @@ Il recupero di queste tre componenti non dipendono dall'SDK.
 Per utilizzare l'SDK, è necessario importarlo
 
 ```ts
-import cieManager from "@pagopa/react-native-cie";
+import cieManager from "@i1990jain/react-native-cie";
 ```
 
 Una volta importato, è possibile accedere a tutti i suoi metodi.
@@ -129,7 +124,7 @@ This repository contains the React Native library for <a href="https://docs.ital
 To use the library in your project
 
 ```bash
-npm install @pagopa/react-native-cie --save
+npm install @i1990jain/react-native-cie --save
 ```
 
 The login with CIE works only with NFC (hardware tecnology).
@@ -142,8 +137,8 @@ If you want, you can use these commands to enable o disable the compiling phase.
 **Enable**
 
 ```bash
-mv node_modules/@pagopa/react-native-cie/.ios node_modules/@pagopa/react-native-cie/ios
-mv node_modules/@pagopa/react-native-cie/.react-native-cie.podspec node_modules/@pagopa/react-native-cie/react-native-cie.podspec
+mv node_modules/@i1990jain/react-native-cie/.ios node_modules/@i1990jain/react-native-cie/ios
+mv node_modules/@i1990jain/react-native-cie/.react-native-cie.podspec node_modules/@i1990jain/react-native-cie/react-native-cie.podspec
 cd ios
 pod install
 ```
@@ -151,8 +146,8 @@ pod install
 **Disable**
 
 ```bash
-mv node_modules/@pagopa/react-native-cie/ios node_modules/@pagopa/react-native-cie/.ios
-mv node_modules/@pagopa/react-native-cie/react-native-cie.podspec node_modules/@pagopa/react-native-cie/.react-native-cie.podspec
+mv node_modules/@i1990jain/react-native-cie/ios node_modules/@i1990jain/react-native-cie/.ios
+mv node_modules/@i1990jain/react-native-cie/react-native-cie.podspec node_modules/@i1990jain/react-native-cie/.react-native-cie.podspec
 cd ios
 rm -rf Pods
 pod install
@@ -186,7 +181,7 @@ It's up to you to get this components.
 To use the library, just import it!
 
 ```ts
-import cieManager from "@pagopa/react-native-cie";
+import cieManager from "@i1990jain/react-native-cie";
 ```
 
 Now you have access to all the methods.
