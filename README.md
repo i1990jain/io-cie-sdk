@@ -72,7 +72,7 @@ Una volta importato, è possibile accedere a tutti i suoi metodi.
 ## API
 
 Di seguito sono elencate alcune delle funzionalità presenti. <br />
-E' possibile trovare <a href="https://github.com/i1990jain/io-cie-sdk/blob/master/index.d.ts">qui</a> tutte le altre.
+E' possibile trovare <a href="https://github.com/i1990jain/react-native-cie-sdk/blob/master/index.d.ts">qui</a> tutte le altre.
 
 | Function                                                                    | Return             | Descrizione                                                  |
 | :-------------------------------------------------------------------------- | :----------------- | :----------------------------------------------------------- |
@@ -182,7 +182,7 @@ Now you have access to all the methods.
 
 ## API
 
-A summary of some functionalities are written below, but you can find more <a href="https://github.com/i1990jain/io-cie-sdk/blob/master/index.d.ts">here</a>.
+A summary of some functionalities are written below, but you can find more <a href="https://github.com/i1990jain/react-native-cie-sdk/blob/master/index.d.ts">here</a>.
 
 | Function                                                                    | Return             | Desciption                                        |
 | :-------------------------------------------------------------------------- | :----------------- | :------------------------------------------------ |
